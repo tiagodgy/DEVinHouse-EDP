@@ -1,0 +1,68 @@
+h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    color: brown;
+}
+body{
+    background-color: yellow;
+    margin:0;
+    padding:0;
+    overflow-x:hidden;
+}
+p{
+    font-size: 14px;
+}
+#titulo{
+    text-align: center;
+    background-image: url(https://images5.alphacoders.com/372/thumb-1920-372649.jpg)  ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 150px;
+    padding: 50px;
+
+}
+button{
+    border-radius: 45px;
+    padding: 10px;
+    margin-top: 20px;
+    border: 2px solid black;
+}
+.navbar{
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%; 
+    height: 100px;
+    margin-bottom: auto;
+    display: flex;
+    justify-content: center; 
+  }
+.navbar a{
+    color: white;
+    font-size: 40px;
+    padding: 5px
+    
+}
+.navbar a:hover{
+    transition: all 300ms ease;
+    background-color: aqua;
+
+}
+#logo{
+    position: absolute;
+    left: 0;
+    height: 100px;
+}
+footer{
+    text-align: center;
+    background-color: aqua;
+    padding: 50px;
+    width: 100vw;
+    position: sticky bottom;
+    bottom:100%;
+
+    
+}
+.conteudo{
+    text-align: center;
+}
