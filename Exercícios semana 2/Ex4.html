@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            font-family:fantasy;
+        }
+        h1{
+            text-align: center;
+            color: #06283D;
+        }
+        .flexbox{
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+            padding: 10px;
+        }
+        #divmiddle{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            background-color: #DFF6FF;
+            padding: 40px;
+        }
+        #divtop{
+            border: solid 1px black;
+            padding: 15px;
+            margin: 5px;
+        }
+        label{
+            font-size: 20px;
+            color: #06283D;
+        }
+        input{
+            font-size: 20px;
+            border-radius: 10px;
+            color: #06283D;
+        }
+        select{
+            font-size: 20px;
+            border-radius: 10px;
+            color: #06283D;
+        }
+        legend{
+            color: #47B5FF;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Formulário de cadastro</h1>
+    <fieldset id="divtop">
+        <legend>Preencha os dados</legend>
+        <div id="divmiddle">
+        
+            <div class="flexbox">
+                <label for="name">Nome:</label>
+                <label for="birth">Data de nascimento:</label>
+                <label for="cpf">CPF:</label>
+                <label for="city">Município:</label>
+            </div>
+                
+            <div class="flexbox">
+                <input type="text" id="name" name="name">
+                <input type="date" id="birth" name="birth">
+                <input type="number" id="cpf" name="cpf">
+                <select id="city" name="city">
+                    <option value="city1">Jundiaí</option>
+                    <option value="city2">Louveira</option>
+                    <option value="city3">Valinhos</option>
+                    <option value="city4">São Paulo</option>
+                    <option value="city5">Itupeva</option>
+            </div>
+            </div>
+    </fieldset>
+    
+    
+        
+</body>
+</html>
