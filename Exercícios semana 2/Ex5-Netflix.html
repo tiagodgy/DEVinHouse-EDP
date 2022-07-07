@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIAGOFLIX</title>
+    <style>
+        body{
+            font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+            font-size: 16px;
+            margin: 0px;
+            padding: 0px;
+        }
+        select{
+            background-color: #00000030;
+            border: solid white 1px;
+            border-radius: 3px;
+            width: 150px;
+            color: white;
+            text-align: center;
+            font-size: 18px;
+        }
+        hr{
+            border: 4px solid gray;
+            background-color: gray;
+            margin: 0;
+            padding: 0;
+        }
+        input{
+            border-radius: 4px;
+            border: none;
+        }
+        footer{
+            position: sticky;
+            display: flex;
+            font-size: 20px;
+            margin-top: 20px;
+            margin-left: 30px;
+            padding-bottom: 100px;
+            flex-direction: column;
+        }
+        .conteudo{
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .conteudorow{
+            display: flex;
+        }
+        .botao{
+            background-color: #e50914;
+            font-family: Arial, Helvetica, sans-serif;
+            border-radius: 5px;
+            width: 100px;
+            border: none;
+        }
+        #top{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-image: url(https://vejasp.abril.com.br/wp-content/uploads/2020/07/netflix-library.jpg);
+            opacity: 0.9;
+            padding-bottom: 100px;
+            background-repeat:no-repeat ;
+            background-size: cover;
+        }
+        #logo{
+            width: 200px;
+            margin-right: 600px;
+            opacity: 100%;
+        }
+        #cabecalho{
+            margin-top: 30px;
+            display: flex;
+            opacity: 1;
+        }
+        #linha2{
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="top">
+        <div id="cabecalho">
+            <img id="logo" src="https://gcdnb.pbrd.co/images/0qcbuQsXDLj4.png?o=1" alt="logo Netflix">
+            <select name="linguas" id="linguas">
+                <option value="pt-br">Português</option>
+                <option value="en">inglês</option>
+            </select>
+            <button style="margin-left: 40px;" class="botao">Entrar</button>
+
+        </div>
+        <div class="conteudo">
+            <h1>Filmes, séries e muitos mais.</h1>
+            <h1>Sem limites</h1>
+            <h2>Assista onde quiser. Cancele quando quiser.</h2>
+            <h3>Pronto para assistir? Informe seu email <br> para criar ou reiniciar sua assinatura</h3>
+            <div>
+                <input style="width: 600px; height: 50px;" type="email" placeholder="Email">
+                <button class="botao" style="height: 52px;">Vamos lá</button>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="conteudo">
+        <div id="linha2">
+            <div style="margin-right: 100px;">
+                <h1>Aproveite na TV</h1>
+                <h2>Assista em Smart TVs, PlayStation, Xbox,<br> Chromecast, Apple TV, aparelhos de Blu-ray e <br> outros dispositivos.</h2>
+            </div>
+            <img src="https://www.nicepng.com/png/full/72-723477_watch-netflix-smart-tv-png-netflix.png" alt="TV com netflix">
+        </div>
+    </div>
+    <hr>
+    <div class="conteudo" style="padding: 80px;">
+        <h1>Vantagens</h1>
+        <h2>Assista suas séries favoritas sem qualquer custo. <br> TIAGOFLIX oferce o melhor custo benefício do mercado.</h2>
+        </div>
+    </div>
+    <hr>
+    <footer>
+        
+        <p>Dúvidas? Não me ligue!</p>
+        
+        <div class="conteudorow">
+            <ul>
+                <li>Perguntas frequentes</li>
+                <li>Formas de assistir</li>
+                <li>Conta</li>
+                <li>Como violamos sua privacidade</li>
+            </ul>
+            <ul>
+                <li>Investidores</li>
+                <li>Clientes insatisfeitos</li>
+                <li>Redes sociais</li>
+                <li>etc...</li>
+            </ul>
+        </div>
+       
+    </footer>
+    
+    
+</body>
+</html>
