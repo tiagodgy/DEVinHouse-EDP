@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBF</title>
+</head>
+<body>
+    <script>
+        var nome = "Tabajara F.C"
+        var vitorias = 12
+        var derrotas = 2
+        var empates = 6
+        var pontosVitoria = 3
+        var pontosDerrota = 0
+        var pontosEmpate = 1
+        var totalPontos = (vitorias*pontosVitoria) + (derrotas*pontosDerrota) + (empates*pontosEmpate)
+        var totalJogos = vitorias+derrotas+empates
+        
+        var paragrafo = document.createElement("p")
+        paragrafo.innerText = "O time "+ nome+ " acumulou "+totalPontos+ " pontos após jogar "+totalJogos+ " partidas!"
+        document.body.append(paragrafo)
+        paragrafo.style.color = "blue";
+    </script>
+</body>
+</html>

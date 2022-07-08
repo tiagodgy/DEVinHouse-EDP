@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viagem</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+        }
+        img{
+            height: 300px;
+            width: 300px;
+        }
+        p{
+            margin-left: 20px;
+        }
+        h3{
+            margin-left: 20px;
+        }
+        #cabecalho{
+            background-color: blue;
+            display: flex;
+            color: azure;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            flex-wrap: nowrap;
+        }
+        #cabecalho > h1{
+            margin-right: 500px;
+            margin-left: 50px;
+            width: 100%;
+        }
+        #cabecalho > h2{
+            margin-right: 25px;
+            margin-left: 25px;
+            justify-content: left;
+        }
+        .flexrow{
+            display: flex;
+            flex-wrap: wrap;
+        }   
+        .flexcoluna{
+            display: flex;
+            flex-direction: column;
+        }
+        .botao{
+            background-color: #e50914;
+            font-family: Arial, Helvetica, sans-serif;
+            border-radius: 5px;
+            width: 100px;
+            height: 50px;
+            border: none;
+            margin-left: 40px;
+            color: azure;
+        }
+        .anuncio{
+            border: solid black 1px;
+            margin: 60px;
+            border-radius: 5px;
+            padding: 2px;
+        }
+        #pesquisa > input{
+            margin: 20px;
+            border-radius: 16px;
+            height: 30px;        
+        }
+        #pesquisa{
+            align-items: center;
+        }
+        footer{
+            position: fixed;
+            display: flex;
+            bottom: 0;
+            width: 100%;
+            background-color: blue;
+            color: azure;
+            align-items: center;
+            
+        }
+        footer > h1{
+            margin-right: 500px;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="cabecalho">
+        <h1>VIAJE-TECH</h1>
+        <h2>Destinos</h2>
+        <h2>Pacotes</h2>
+        <h2>Sobre nós</h2>
+        <h2>Contato</h2>
+    </div>
+    <div class="flexrow" style="justify-content: center;">
+        <div class="flexcoluna, anuncio">
+            <img src="https://static.natgeo.pt/files/styles/image_3200/public/pia00271_detail.jpg?w=710&h=710" alt="venus">
+            <h3>Venus</h3>
+            <div class="flexrow">
+                <p>Preço a partir de <br> <b>120 UMIP</b></p>
+                <button class="botao">Visualizar>></button>
+            </div>
+        </div>
+        <div class="flexcoluna, anuncio">
+            <img <img src="https://p2.trrsf.com/image/fget/cf/940/0/images.terra.com/2014/11/21/nasaplanetaterra01.jpg" alt="terra">
+            <h3>Terra</h3>
+            <div class="flexrow">
+                <p>Preço a partir de <br> <b>60 UMIP</b></p>
+                <button class="botao">Visualizar>></button>
+            </div>
+        </div>
+        <div class="flexcoluna, anuncio">
+            <img <img src="https://s1.static.brasilescola.uol.com.br/be/2021/11/planeta-marte.jpg" alt="marte">
+            <h3>Marte</h3>
+            <div class="flexrow">
+                <p>Preço a partir de <br> <b>500 UMIP</b></p>
+                <button class="botao">Visualizar>></button>
+            </div>
+        </div>  
+    </div>
+    <div class="flexrow" id="pesquisa" style="justify-content: center;">
+        <input type="text" placeholder="Informe a Origem">
+        <input type="text" placeholder="Informe o Destino">
+        <label for="ida">ida</label>
+        <input type="date" name="ida">
+        <label for="volta">Volta</label>
+        <input type="date" name="volta">
+        <button class="botao" style="height: 50px; width: 200px;">Procurar</button>
+    </div>   
+    <footer>
+        <h1>VIAJE-TECH</h1>
+        <p>Direitos reservados: Lorem ipsum dolor sit amet.</p>
+    </footer>
+</body>
+</html>
