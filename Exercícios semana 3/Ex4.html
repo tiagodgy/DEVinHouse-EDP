@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex4</title>
+    <style>
+        div{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+        #central{
+            display: flex;
+            flex-direction: row;
+        }
+        button{
+            width: 13rem;
+            margin: 1.5rem;
+        }
+        #divb{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <div id="central">
+        <div>
+            <label for="inicio">Incio</label>
+            <label for="raiz">Raiz</label>
+        </div>
+        <div>
+            <input type="number" id="inicio">
+            <input type="number" id="raiz">
+        </div>
+    </div>
+    <div id="divb">
+        <button id="botao">Enviar</button>
+        <p id="resultado"></p>
+    </div>
+    
+    <script>
+        const botao = document.querySelector('#botao')
+        botao.addEventListener('click', pa)
+
+        function pa(){
+            const inicio = parseFloat(document.querySelector('#inicio').value)
+            const raiz = parseFloat(document.querySelector('#raiz').value)
+            const text = document.querySelector('#resultado')
+            let arr =[]
+            for (let i=0; i<10; i++){
+                arr[i]= inicio + (i*raiz)
+            }
+            text.innerHTML=`PA = ${arr}`
+        }
+        
+    </script>
+</body>
+</html>

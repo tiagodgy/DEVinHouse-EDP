@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex3</title>
+    <style>
+        div{
+            display: flex;
+            justify-content: center;
+        }
+        #inputs{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        #botoes{
+            margin: 10px;
+          
+        }
+        button{
+            margin: 10px;
+            width: 3rem;
+            height: 3rem;
+            font-size: 2rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Calculadora</h1>
+    </div>
+    <div id="inputs">
+        <input type="number" id="num1" placeholder="Número 1">
+        <input type="number" id="num2" placeholder="Número 2">
+        <input type="number" id="resultado" placeholder="Resultado" readonly>
+    </div>
+    <div id="botoes">
+        <button onclick="soma()">+</button>
+        <button onclick="sub()">-</button>
+        <button onclick="mult()">*</button>
+        <button onclick="div()">/</button>
+    </div>
+
+    <script>
+       function soma(){
+        const num1 = document.querySelector('#num1').value
+        const num2 = document.querySelector('#num2').value
+        document.querySelector('#resultado').placeholder=parseFloat(num1) + parseFloat(num2)
+       } 
+       function sub(){
+        const num1 = document.querySelector('#num1').value
+        const num2 = document.querySelector('#num2').value
+        document.querySelector('#resultado').placeholder=parseFloat(num1) - parseFloat(num2)
+       } 
+       function mult(){
+        const num1 = document.querySelector('#num1').value
+        const num2 = document.querySelector('#num2').value
+        document.querySelector('#resultado').placeholder=parseFloat(num1) * parseFloat(num2)
+       } 
+       function div(){
+        const num1 = document.querySelector('#num1').value
+        const num2 = document.querySelector('#num2').value
+        document.querySelector('#resultado').placeholder=parseFloat(num1) / parseFloat(num2)
+       } 
+    </script>
+</body>
+</html>

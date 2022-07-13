@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex2</title>
+    <style>
+        div{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Par ou impar?</h1>
+    </div>
+    <div>
+        <input type="number" id="numero">
+        <button onclick="eo()">Enviar</button>
+    </div>
+    <div>
+        <p id="resultado">O número é:</p>
+    </div>
+    <script>
+        function eo(){
+            const num= document.querySelector('#numero').value
+            console.log(num)
+            const texto= document.querySelector('#resultado')
+            if(num%2 == 0){
+                texto.innerHTML="O número é: par"
+            }
+            else{
+                texto.innerHTML="O número é: impar"
+            }
+            
+        }
+            
+    </script>
+</body>
+</html>
