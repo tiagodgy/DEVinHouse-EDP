@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex6</title>
+</head>
+<body>
+    <label for="nascimento">Você nasceu em:</label>
+    <input type="date" id="nascimento">
+    <button>Calcular idade</button>
+    <script>
+        const botao = document.querySelector('button')
+        botao.addEventListener('click', calcular)
+        
+        function calcular(){
+            const nascimento = document.querySelector('#nascimento').value
+            const anoNascimento = parseInt(nascimento.substring(0,4))
+            const mesNascimento = parseInt(nascimento.substring(5,7))
+            const diaNascimento = parseInt(nascimento.substring(8,10))
+            const d = new Date()
+            let year = d.getFullYear()
+            let month = parseInt(d.getMonth() + 1) 
+            let day = parseInt(d.getDate()) 
+
+            if(month == mesNascimento && day >=diaNascimento ){
+                let idade = year-anoNascimento
+                let resultado = document.createElement('p')
+                resultado.innerHTML=`Sua idade é: ${idade} anos`
+                document.body.append(resultado)
+                console.log(1)
+            }
+            else if(month > mesNascimento){
+                let idade = year-anoNascimento
+                    let resultado = document.createElement('p')
+                    resultado.innerHTML=`Sua idade é: ${idade} anos`
+                    document.body.append(resultado)
+                    console.log(2)
+            }
+            else{
+                let idade = year-anoNascimento -1
+                let resultado = document.createElement('p')
+                resultado.innerHTML=`Sua idade é: ${idade} anos`
+                document.body.append(resultado)
+                console.log(3)
+                
+            }
+        }
+    </script>
+</body>
+</html>

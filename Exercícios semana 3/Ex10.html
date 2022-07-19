@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex10</title>
+</head>
+<body>
+    <div>
+        <label for="produto">Item a adicionar</label>
+        <input type="text" id="produto">
+        <button id="btnSelecionar">Adicionar</button>
+        <br>
+        <ul></ul>
+    </div>
+
+    <script>
+        const btnAdicionar = document.querySelector("#btnSelecionar")
+        btnAdicionar.addEventListener('click', adicionar)
+        const lista = document.querySelector("ul")
+        const avisoDados = document.createElement('p')
+
+        let arr =[]
+
+        if(localStorage.length > 0){
+            let dados = JSON.parse(localStorage.getItem('itens')) 
+            
+            for(let i=0; i < dados.length; i++){
+                const itemLista = document.createElement('li')
+                itemLista.appendChild(document.createTextNode(dados[i]))
+                lista.appendChild(itemLista)
+                arr.push(dados[i])
+            }
+        }
+        else{
+            avisoDados.appendChild(document.createTextNode('Você não possui uma lista salva'))
+            avisoDados.style.color='red'
+            document.body.appendChild(avisoDados)
+        }
+
+        function adicionar(){
+            const item = document.querySelector('#produto').value
+            if(!item){
+                window.alert("Você deve preencher o nome do item")
+            }
+            else{
+                arr.push(item)
+                console.log(arr)
+                const itemLista = document.createElement('li')
+                itemLista.appendChild(document.createTextNode(item))
+                lista.appendChild(itemLista)
+                localStorage.setItem("itens", JSON.stringify(arr))
+                console.log(localStorage)
+                avisoDados.style.display ='none'
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex7</title>
+</head>
+<body>
+    <h1>Em que estação estamos</h1>
+    <br>
+    <img src="" alt="imagem aqui" style="width: 50rem;">
+    <script>
+        const data = new Date()
+        const dia = parseInt(data.getDay())
+        const mes = parseInt(data.getMonth()  +1)
+        let texto = document.querySelector("h1")
+        let img = document.querySelector("img")
+        
+        if(mes >= 1 && mes < 3 ){
+            verao()
+        }
+        else if(mes >= 4 && mes < 6 ){
+            outono()
+        }
+        else if(mes >= 7 && mes < 9 ){
+            inverno()
+        }
+        else if(mes >= 10 && mes < 12 ){
+            primavera()
+        }
+        else if((mes == 12 && dia >=22) || (mes == 3 && dia <=21)){
+            verao()
+        }
+        else if((mes == 3 && dia >=22) || (mes == 6 && dia <=21)){
+            outono()
+        }
+        else if((mes == 6 && dia >=22) || (mes == 9 && dia <=21)){
+            inverno()
+        }
+        else if((mes == 9 && dia >=22) || (mes == 12 && dia <=21)){
+            primavera()
+        }
+
+
+      // Funções das estações do ano  
+        function verao(){
+            texto.innerHTML="Estamos no verão"
+            img.src="https://cdn.abcdoabc.com.br/verao_5508634b.jpg"
+        }
+        function outono(){
+            texto.innerHTML="Estamos no outono"
+            img.src="https://t5z6q4c2.rocketcdn.me/wp-content/uploads/2020/03/outono-caracteristicas-quando-se-inicia-e-estacao-do-ano-no-brasil.jpeg"
+        }
+        function primavera(){
+            texto.innerHTML="Estamos na primavera"
+            img.src="https://soubh.uai.com.br/uploads/post/image/10917/main_destaque.jpg"
+        }
+        function inverno(){
+            texto.innerHTML="Estamos no inverno"
+            img.src="https://vidadeturista.com/wp-content/uploads/2015/06/5-cidades-para-conhecer-no-inverno.jpg"
+        }
+    </script>
+</body>
+</html>
