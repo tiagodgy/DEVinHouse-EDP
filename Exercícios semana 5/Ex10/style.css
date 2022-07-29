@@ -1,0 +1,39 @@
+body{
+    background-image: url('https://c.tenor.com/6b5fzs1DVB8AAAAM/miau.gif');
+    background-size: repeat;  
+    height: 100vh;
+    padding:0;
+    margin:0;
+}
+
+div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#gatinho{
+    margin-top: 2em;
+    height: 30em;
+    width: 30em;
+}
+
+button{
+    margin-top: 2em;
+    height: 2em;
+    border-radius: 0.5em;
+    border-width: 0;
+    background-color: red;
+    height: 5em;
+    font-size: 1em;
+    color: aliceblue;
+}
+
+#piu{
+    height: 10em;
+}
+
+h1{
+    color: red;
+    font-size: 3em;
+}
